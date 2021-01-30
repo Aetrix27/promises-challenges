@@ -6,10 +6,12 @@
  * 1. Read over the code that follows. What will be printed to the console when
  *    it runs? Run the code using `node challenge2.js` and verify that your
  *    expectation was correct.
- * 
+ *  It will print Hello there, Ducky since it is passing a name, then 
+ * MAKE SCHOOL  IS AWESOME!!!
  * 
  * 2. What happens if greet() fails? Make it fail by changing 'name' to a number
  *    instead of a string. What happens? Does uppercaser() still run?
+ * It still runs, but shows the number instead of the name. Uppercaser still runs 
  * 
  * 
  * 3. What happens if greet() succeeds and uppercaser() fails? Modify your code
@@ -72,8 +74,41 @@ greet(name)
         return uppercaser(my_str);
     })
     .then((uppercaserResult) => {
-        console.log(uppercaserResult)
-    }).catch((err) => {
+        console.log(uppercaserResult);
+     
+    })
+    .then((greetResult2) => {
+      console.log(greetResult2)
+      return spacer(name);
+  
+    })
+    .then((spacerResult) => {
+      console.log(spacerResult)
+  
+    })
+    .catch((err) => {
         console.log('Received an error!')
         console.log(err);
     });
+
+
+async function spacer(str){
+  return new Promise(function(resolve, reject) {
+    setTimeout(function(){
+      if(typeof str === 'string'){
+        let spacedStr = ''
+        for (let char = 0; char < str.length; char++){
+          spacedStr += `${str[char]}`;
+          spacedStr += ' '
+        }
+
+        resolve(spacedStr);
+
+      }else{
+        reject("The word must be a string")
+      }
+    
+    }, 1000);
+  });
+}
+

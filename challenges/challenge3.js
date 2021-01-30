@@ -6,11 +6,11 @@
  * 1. Read over the `greetAndUppercase` function. This function uses
  *    Async/Await. How is this function different than a regular (non-async)
  *    function? What is its return type?
- * 
- * 
+ *  Async functions perform tasks in the background
+ *  
  * 2. Uncomment block #1 and run the code using `node challenge3.js`. What is
  *    printed when we use `greetAndUppercase` like a regular function?
- * 
+ * Promise { <pending> }
  * 
  * 3. Uncomment block #2 and run the code again. What happens now?
  * 
@@ -68,8 +68,8 @@ async function greetAndUppercase(name) {
 }
 
 /* Uncomment me! #1 */
-// result = greetAndUppercase('Ducky')
-// console.log(result)
+result = greetAndUppercase('Ducky')
+console.log(result)
 
 /* Uncomment me! #2 */
 // greetAndUppercase('Ducky')
