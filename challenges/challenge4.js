@@ -1,5 +1,7 @@
 /*
  *******************************************************************************
+***OMITTED***
+
  * INSTRUCTIONS:
  * Follow the steps below and answer the discusssion questions that follow.
  * 
